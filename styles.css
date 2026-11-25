@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.app {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+}
+
+.app-title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.app-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.quote-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 36px 28px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+  margin-bottom: 20px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: #2d2d44;
+  margin-bottom: 16px;
+}
+
+.quote-author {
+  font-size: 1rem;
+  color: #764ba2;
+  font-weight: 600;
+}
+
+.fade {
+  animation: fadeIn 0.45s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #5a3e99;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.feedback {
+  margin-top: 16px;
+  min-height: 1.3em;
+  color: #ffe27a;
+  font-weight: 600;
+}
+
+.hint {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+.hint kbd {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-family: inherit;
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1.4rem;
+  }
+
+  .quote-card {
+    padding: 26px 18px;
+    min-height: 160px;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 11px 22px;
+  }
+}
